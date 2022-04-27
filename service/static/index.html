@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product RESTful Service</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/cerulean_bootstrap.min.css">
+
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fd31a8cc81.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+          <h1>Product REST API Service</h1>
+      </div>
+
+      <!-- Flash Message -->
+      <div class="table-responsive">
+        <table class="table">
+          <tr><td>Status:</td><td><span id="flash_message"></span></td></tr>
+        </table>
+      </div>
+
+      <!-- FORM -->
+      <div class="col-md-12" id="form_data">
+        <h3>Create, Retrieve, Update, and Delete a Product:</h3>
+        <div class="well">
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="product_id">Product ID:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" id="product_id" placeholder="Enter ID of Product">
+              </div>
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-primary" id="retrieve-btn">Retrieve</button>
+                <button type="submit" class="btn btn-danger" id="delete-btn">Delete</button>
+              </div>
+            </div>
+          </div> <!-- form horizontal -->
+
+          <div class="form-horizontal">
+
+            <!-- NAME -->
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="product_name">Name:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" id="product_name" placeholder="Enter name of Product">
+              </div>
+            </div>
+
+            <!-- CATEGORY -->
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="product_category">Category:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="category" id="product_category" placeholder="Enter category of Product">
+              </div>
+            </div>
+
+            <!-- PRICE -->
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="product_price">Price:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="price" id="product_price" placeholder="Enter price of Product">
+              </div>
+            </div>
+            
+            <!-- STOCK -->
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="product_stock">Stock:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="stock" id="product_stock" placeholder="Enter stock of Product">
+              </div>
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="product_desctiption">Description:</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" name="description" id="product_description" rows="3" placeholder="Enter description of Product"></textarea>
+              </div>
+            </div>
+
+            <!-- SUBMIT BUTTONS -->
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" id="search-btn">Search</button>
+                <button type="submit" class="btn btn-primary" id="clear-btn">Clear</button>
+                <button type="submit" class="btn btn-success" id="create-btn">Create</button>
+                <button type="submit" class="btn btn-warning" id="update-btn">Update</button>
+              </div>
+            </div>
+          </div> <!-- form horizontal -->
+        </div> <!-- end well -->
+      </div> <!-- end Form -->
+
+      <!-- Search Results -->
+      <div class="table-responsive col-md-12" id="search_results">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th class="col-md-2">ID</th>
+            <th class="col-md-2">Name</th>
+            <th class="col-md-2">Category</th>
+            <!-- <th class="col-md-2">Available</th> -->
+            <th class="col-md-2">Price</th>
+            <th class="col-md-2">Stock</th>
+            <th class="col-md-4">Description</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+
+      <footer>
+        <div class="text-center p-4" style="background-color: rgba(0,0,0,0,05);">
+          <i class="social-icon fab fa-facebook"></i>
+          <i class="social-icon fab fa-twitter"></i>
+          <i class="social-icon fab fa-instagram-square"></i>
+          <i class="social-icon fas fa-envelope-square"></i>
+          <p>API Documentation for Product Service is <a href='/apidocs'>here</a></p>
+          <p>&copy; NYU DevOps Company 2022</p>
+        </div>
+      </footer>
+
+    </div> <!-- container -->
+  <script type="text/javascript" src = "static/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src = "static/js/bootstrap.min.js"></script>
+
+  <!-- YOUR REST API -->
+  <script type="text/javascript" src="static/js/rest_api.js"></script>
+  </body>
+</html>
